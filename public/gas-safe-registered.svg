@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64" role="img" aria-labelledby="gtitle">
+  <title id="gtitle">Gas Safe Register</title>
+  <rect width="200" height="64" rx="3" fill="#0a4f9c"/>
+  <rect y="20" width="200" height="44" fill="#ffd200"/>
+  <text x="100" y="15" text-anchor="middle" fill="#fff" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800">GAS SAFE</text>
+  <text x="100" y="48" text-anchor="middle" fill="#0a1a2e" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="16" font-weight="800">REGISTERED</text>
+</svg>
