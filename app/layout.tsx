@@ -6,7 +6,14 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+/** Canonical site URL for Open Graph, schema.org, and absolute asset URLs */
+const siteUrl =
+  (process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null)) ??
+  'https://firstchoiceheatingni.com'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'First Choice Heating | Boiler Services Lisburn, Northern Ireland',
   description: 'Professional boiler servicing, installation & repairs in Lisburn, Belfast, Antrim & Ballymena. Gas Safe registered. 24/7 emergency call-outs available.',
   keywords: 'boiler service Lisburn, heating engineers Lisburn, boiler repair Belfast, gas safe engineers, LPG boiler service, oil boiler service, emergency heating',
@@ -51,7 +58,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "name": "First Choice Heating",
               "description": "Professional boiler servicing, installation and repairs",
-              "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/First%20Choice%20Heating%20Logo-gPxgTDq6mzFrLMVB9m0m6XVFZptQfw.jpg",
+              "image": `${siteUrl}/first-choice-heating-logo.png`,
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Lisburn",
@@ -69,7 +76,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased" suppressHydrationWarning>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

@@ -24,19 +24,18 @@ export function Header({ onPhoneClick, onQuoteClick }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between min-h-[5.25rem] py-2 sm:min-h-20 sm:py-0">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#home" className="flex items-center gap-2">
-              <div className="h-10 w-[148px] overflow-hidden flex items-center justify-center">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/First%20Choice%20Heating%20Logo-gPxgTDq6mzFrLMVB9m0m6XVFZptQfw.jpg"
-                  alt="First Choice Heating Logo"
-                  width={180}
-                  height={60}
-                  className="h-[3.25rem] w-auto max-w-none object-center [clip-path:inset(8%_0_12%_0)]"
-                />
-              </div>
+              <Image
+                src="/first-choice-heating-logo.png"
+                alt="First Choice Heating - Gas, Oil, LPG Logo"
+                width={320}
+                height={214}
+                className="h-14 w-auto sm:h-16"
+                priority
+              />
             </a>
           </div>
 
